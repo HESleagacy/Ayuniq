@@ -1,0 +1,38 @@
+{
+  "name": "ayuniq-backend",
+  "version": "1.0.0",
+  "description": "Ayuniq Backend API - FHIR R4 compliant server for NAMASTE and ICD-11 terminology integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "fhir",
+    "ayurveda",
+    "icd-11",
+    "namaste",
+    "healthcare",
+    "terminology",
+    "ayuniq"
+  ],
+  "author": "Ayuniq Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0",
+    "csv-parser": "^3.0.0",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
