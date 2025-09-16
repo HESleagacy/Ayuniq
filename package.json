@@ -1,0 +1,21 @@
+{
+  "name": "ayuniqq",
+  "version": "1.0.0",
+  "description": "SIH_2025_WINNERS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abjt01/Ayuniqq.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/abjt01/Ayuniqq/issues"
+  },
+  "homepage": "https://github.com/abjt01/Ayuniqq#readme"
+}

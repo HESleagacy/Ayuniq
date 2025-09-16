@@ -1,0 +1,6 @@
+
+// --- NOT INCLUDED IN THE PROTOTYPE ---
+
+// This file will contain translation-related components and utilities
+
+// such as constants, validators, or helpers with translation APIs
