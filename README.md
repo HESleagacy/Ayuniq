@@ -1,2 +1,1 @@
-# Ayunic
-SIH_2025_WINNERS
+
