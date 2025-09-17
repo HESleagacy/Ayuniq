@@ -1,6 +1,6 @@
 import sqlite3
 import json
-DATABASE_PATH = "local_fhir.db" 
+from app.shared.config import DATABASE_PATH
 def init_db():  #CREATE DB AGR EXIST NHI KRTA
     connect = sqlite3.connect(DATABASE_PATH)
     cursor = connect.cursor()
