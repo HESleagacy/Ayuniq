@@ -1,4 +1,3 @@
-
 from fastapi import FastAPI
 from .routes import router
 
@@ -12,4 +11,4 @@ app.include_router(router, prefix="/insurance")
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8001, reload=True)
+    uvicorn.run("app.main:app", host="0.0.0.0", port=6000, reload=True)

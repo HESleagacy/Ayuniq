@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/layout/Header';
 import Navigation from './components/layout/Navigation';
 import DualSearchInterface from './components/search/DualSearchInterface';
+import ResourceBuilder from './components/fhir/ResourceBuilder';
 import AdminPanel from './components/admin/AdminPanel';
 import ErrorBoundary from './components/common/ErrorBoundary';
 import LoadingSpinner from './components/common/LoadingSpinner';
@@ -39,20 +40,28 @@ function App() {
     }
   };
 
+  // updated tabs with resource builder
   const tabs = [
     {
       id: 'search',
-      label: 'Searching & Mapping',
+      label: 'Search & Mapping',
       icon: '🔍',
       component: DualSearchInterface,
-      description: 'Creating NAMASTE and ICD-11 mappings'
+      description: 'Search NAMASTE terminology and create manual ICD-11 mappings'
+    },
+    {
+      id: 'fhir',
+      label: 'FHIR Resources',
+      icon: '{.}',
+      component: ResourceBuilder,
+      description: 'Generate FHIR R4 condition resources for clinical use'
     },
     {
       id: 'admin',
       label: 'System Info',
       icon: '📊',
       component: AdminPanel,
-      description: 'view system statistics and data overview'
+      description: 'View system statistics and data overview'
     }
   ];
 
@@ -108,12 +117,12 @@ function App() {
         )}
 
         <main className="container mx-auto px-4 py-6">
-          {/* system status banner */}
-          {/* {appInfo && serverStatus === 'healthy' && (
+          {/* system status banner
+          {appInfo && serverStatus === 'healthy' && (
             <div className="mb-6">
               <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                 <div className="flex items-center justify-between">
-                  {/* <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-4">
                     <div className="flex items-center space-x-2">
                       <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                       <span className="text-green-800 font-medium">system online</span>
@@ -124,20 +133,16 @@ function App() {
                         <span className="font-medium">{appInfo.data.totalTerms || 0}</span> namaste terms loaded
                       </div>
                     )}
-                  </div> */}
+                  </div>
 
-                  {/* <div className="flex items-center space-x-6 text-sm text-green-600"> */}
-                    {/* <div>
-                      <span className="font-medium">data:</span> {appInfo.services?.dataLoader || 'unknown'}
-                    </div> */}
-                    {/* <div>
-                      <span className="font-medium">who api:</span> {appInfo.services?.whoIcdApi || 'unknown'}
-                    </div> */}
-                  {/* </div> */}
-                {/* </div> */}
-              {/* </div> */}
-            {/* </div> */}
-         {/* )} */}
+                  <div className="flex items-center space-x-6 text-sm text-green-600">
+                    <div><span className="font-medium">data:</span> {appInfo.services?.dataLoader || 'unknown'}</div>
+                    <div><span className="font-medium">who api:</span> {appInfo.services?.whoIcdApi || 'unknown'}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )} */}
 
           {/* active tab header */}
           <div className="mb-6">
@@ -236,7 +241,7 @@ function App() {
                   <strong>ayuniq</strong> - bridging traditional and modern medicine
                 </div>
                 <div className="text-xs text-gray-500">
-                  namaste to icd-11 translation | fhir r4 compliant
+                  NAMASTE to ICD-11 Translation | FHIR R4 compliant
                 </div>
               </div>
               
@@ -248,11 +253,10 @@ function App() {
               </div>
             </div>
 
-            {/* data attribution */}
             <div className="mt-4 pt-4 border-t border-gray-100">
               <div className="text-xs text-gray-500 text-center">
-                namaste terminology data provided by ministry of ayush, government of india
-                • icd-11 codes from who international classification of diseases
+                NAMASTE terminology data provided by Ministry of Ayush, Government of India
+                • ICD-11 codes from WHO International Classification of Diseases
               </div>
             </div>
           </div>

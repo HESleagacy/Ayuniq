@@ -1,8 +1,7 @@
-# db.py: SQLite operations for insurance claims.
-
 import sqlite3
 import json
 from ..shared.config import INSURANCE_DB_PATH
+from typing import Dict
 
 def init_db():
     """Initialize DB and create claims table."""
@@ -21,16 +20,21 @@ def init_db():
 
 init_db()
 
-def save_claim_to_db(claim_data: dict, api_url: str):
+def save_claim_to_db(claim_data: Dict, api_url: str = "http://mock-insurance.local/submit"):
     """Save claim to DB for queuing."""
     conn = sqlite3.connect(INSURANCE_DB_PATH)
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO insurance_claims (data, api_url) VALUES (?, ?)", (json.dumps(claim_data), api_url))
+    cursor.execute(
+        "INSERT INTO insurance_claims (data, api_url) VALUES (?, ?)",
+        (json.dumps(claim_data), api_url)
+    )
     conn.commit()
+    claim_id = cursor.lastrowid
     conn.close()
+    return claim_id
 
+'''
 def get_unsynced_claims():
-    """Get unsynced claims."""
     conn = sqlite3.connect(INSURANCE_DB_PATH)
     cursor = conn.cursor()
     cursor.execute("SELECT id, data, api_url FROM insurance_claims WHERE synced = FALSE")
@@ -39,9 +43,9 @@ def get_unsynced_claims():
     return [{"id": row[0], "data": json.loads(row[1]), "api_url": row[2]} for row in rows]
 
 def mark_as_synced(claim_id: int):
-    """Mark claim as synced."""
     conn = sqlite3.connect(INSURANCE_DB_PATH)
     cursor = conn.cursor()
     cursor.execute("UPDATE insurance_claims SET synced = TRUE WHERE id = ?", (claim_id,))
     conn.commit()
     conn.close()
+    '''

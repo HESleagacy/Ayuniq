@@ -1,4 +1,4 @@
-from  fastapi import APIRouter, Body, HTTPException  
+from fastapi import APIRouter, Body, HTTPException  
 from .models.fhir_models import FHIRInput 
 from .storage.db import save_bundle_to_db  
 '''
@@ -12,12 +12,11 @@ from fhir.resources.claim import Claim
 from fhir.resources.codeableconcept import CodeableConcept  
 from fhir.resources.coding import Coding           
 
+import requests  # Add this import for HTTP requests
 
 from datetime import datetime
 
-
 router = APIRouter()  
-
 
 @router.post("/generate")
 async def generate_bundle(input_data: FHIRInput = Body(...)):
@@ -57,7 +56,19 @@ async def generate_bundle(input_data: FHIRInput = Body(...)):
         )
         bundle_dict = bundle.model_dump()
         save_bundle_to_db(bundle_dict)
-        return {"bundle": bundle_dict}
+
+        # Add insurance submission
+        insurance_url = "http://localhost:3002/insurance/submit"  #PLZ DONT MESS WITH IT AGAIN AND AGAIN
+        claim_dict = claim.model_dump()  
+        response = requests.post(
+            insurance_url,
+            json={"bundle": bundle_dict, "claim": claim_dict},  # Send bundle and claim
+            timeout=10
+        )
+        if response.status_code != 200:
+            raise Exception(f"Insurance submission failed: {response.text}")
+
+        return {"bundle": bundle_dict, "insurance_status": "submitted", "claim_id": response.json().get("claim_id", "unknown")}
 
     except Exception as e:
         # Catch error
@@ -93,4 +104,5 @@ async def sync_offline_data():
 
     # Return how many bundles got synced
     return {"synced_count": len(unsynced), "message": "Offline data synced."}
-    '''
+'''
+
