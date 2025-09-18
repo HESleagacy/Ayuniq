@@ -1,7 +1,7 @@
 # routes.py: Defines API endpoints for insurance claims.
 
 from fastapi import APIRouter, Body, HTTPException
-from app.models.claim_models import ClaimInput
+from .models.claim_models import ClaimInput
 '''
 from .storage.db import save_claim_to_db, get_unsynced_claims, mark_as_synced
 '''
