@@ -103,7 +103,7 @@ ayuniq/
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it!
 
 ## 📧 Contact
-For questions or support, reach out at [your-email@example.com](mailto:sarvadubey@gmail.com).
+For questions or support, reach out at [sarvadubey@gmail.com](mailto:sarvadubey@gmail.com).
 
 
 
