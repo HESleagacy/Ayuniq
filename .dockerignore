@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log
+.DS_Store
+.git
+.gitignore
+.env
+dist
+build
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+.env.local
+.vscode
+.idea

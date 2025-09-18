@@ -1,0 +1,43 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - fhir_service
+      - insurance_service
+
+  fhir_service:
+    build: ./microservices/fhir_service
+    ports:
+      - "6000:6000"
+    volumes:
+      - ./microservices/fhir_service/app:/app
+    environment:
+      - DATABASE_PATH=/app/local_fhir.db
+
+  insurance_service:
+    build: ./microservices/insurance_service
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./microservices/insurance_service/app:/app
+    environment:
+      - DATABASE_PATH=/app/local_insurance.db
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+
