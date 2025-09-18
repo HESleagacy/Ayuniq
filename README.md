@@ -2,7 +2,11 @@
 
 <img width="32" height="32" alt="image" src="https://github.com/user-attachments/assets/119b3bf3-f38e-40f6-b97c-abe5cf83eac2" />
 
-## 🌿 Ayuniq - Hybrid FHIR-AYUSH System 🌿
+Below is the updated `README.md` with the **Tech Stack** section, adjusted FHIR port to 6000, and your credentials incorporated (repository URL: `https://github.com/HESleagacy/Ayuniq.git` and email: `sarvadubey@gmail.com`). The design remains visually appealing with emojis, shields, and tables, reflecting the current date and time (02:52 PM IST, Thursday, September 18, 2025).
+
+---
+
+# 🌿 Ayuniq - Hybrid FHIR-AYUSH System 🌿
 
 Welcome to **Ayuniq**, an innovative platform that integrates traditional Ayurvedic knowledge with modern healthcare standards using the FHIR (Fast Healthcare Interoperability Resources) framework. This project bridges NAMASTE (Ayurvedic terminology) and ICD-11 (WHO's International Classification of Diseases) systems, enabling seamless data exchange between microservices for FHIR bundle generation and insurance claim processing.
 
@@ -25,6 +29,25 @@ The system consists of:
 - **Insurance Service**: Python/FastAPI microservice (port 3002).
 - **Frontend**: React application (port 3000).
 
+## 💻 Tech Stack
+
+| **Category**      | **Technology**         | **Version** | **Purpose**                       |
+|-------------------|-------------------------|-------------|-----------------------------------|
+| **Backend**       | Node.js                | 18+         | Server-side logic and API         |
+|                   | Express.js             | Latest      | Web framework                     |
+|                   | Axios                   | Latest      | HTTP requests                     |
+| **Microservices** | Python                 | 3.9+        | Service logic                     |
+|                   | FastAPI                | 0.103.2     | API framework                     |
+|                   | Uvicorn                | 0.23.2      | ASGI server                       |
+|                   | FHIR.resources          | 7.0.0       | FHIR resource handling            |
+|                   | SQLite3                | Latest      | Local database                    |
+| **Frontend**      | React                  | 18+         | User interface                    |
+|                   | Tailwind CSS           | Latest      | Styling                           |
+| **Containerization** | Docker             | Latest      | Container runtime                 |
+|                   | Docker Compose         | Latest      | Multi-container orchestration     |
+| **Other**         | Git                    | Latest      | Version control                   |
+|                   | CSV Parsing (Node)     | Latest      | Data processing                   |
+
 ## 📋 Features
 - Dual-table search for NAMASTE and ICD-11 terminologies.
 - Manual mapping creation between Ayurvedic and ICD-11 codes.
@@ -43,14 +66,14 @@ The system consists of:
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/HESleagacy/Ayuniq.git
-   cd ayuniq
+   cd Ayuniq
    ```
 
 2. **Build and Run with Docker Compose**
    ```bash
    docker-compose up --build
    ```
-   - This starts all services: backend (8000), fhir_service (6001), insurance_service (3002), and frontend (3000).
+   - This starts all services: backend (8000), fhir_service (6000), insurance_service (3002), and frontend (3000).
 
 3. **Verify Services**
    - Backend: `http://localhost:8000/api/health`
@@ -88,7 +111,7 @@ curl -X POST 'http://localhost:8000/api/generate-fhir-claim' \
 
 ## 📂 Project Structure
 ```
-ayuniq/
+Ayuniq/
 ├── backend/           # Node.js backend
 ├── frontend/          # React frontend
 ├── microservices/     # Python microservices
@@ -104,6 +127,3 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 ## 📧 Contact
 For questions or support, reach out at [sarvadubey@gmail.com](mailto:sarvadubey@gmail.com).
-
-
-
