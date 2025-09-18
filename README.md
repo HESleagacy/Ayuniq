@@ -2,8 +2,6 @@
 
 <img width="32" height="32" alt="image" src="https://github.com/user-attachments/assets/119b3bf3-f38e-40f6-b97c-abe5cf83eac2" />
 
-Below is the updated `README.md` with the **Tech Stack** section, adjusted FHIR port to 6000, and your credentials incorporated (repository URL: `https://github.com/HESleagacy/Ayuniq.git` and email: `sarvadubey@gmail.com`). The design remains visually appealing with emojis, shields, and tables, reflecting the current date and time (02:52 PM IST, Thursday, September 18, 2025).
-
 ---
 
 # 🌿 Ayuniq - Hybrid FHIR-AYUSH System 🌿
