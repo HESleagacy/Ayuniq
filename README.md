@@ -1,6 +1,7 @@
 ## AYUNIQ
 
 <img width="32" height="32" alt="image" src="https://github.com/user-attachments/assets/119b3bf3-f38e-40f6-b97c-abe5cf83eac2" />
+
 ## 🌿 Ayuniq - Hybrid FHIR-AYUSH System 🌿
 
 Welcome to **Ayuniq**, an innovative platform that integrates traditional Ayurvedic knowledge with modern healthcare standards using the FHIR (Fast Healthcare Interoperability Resources) framework. This project bridges NAMASTE (Ayurvedic terminology) and ICD-11 (WHO's International Classification of Diseases) systems, enabling seamless data exchange between microservices for FHIR bundle generation and insurance claim processing.
