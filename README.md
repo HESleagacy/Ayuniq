@@ -42,7 +42,7 @@ The system consists of:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/ayuniq.git
+   git clone https://github.com/HESleagacy/Ayuniq.git
    cd ayuniq
    ```
 
@@ -54,7 +54,7 @@ The system consists of:
 
 3. **Verify Services**
    - Backend: `http://localhost:8000/api/health`
-   - FHIR Service: `http://localhost:6001/fhir/generate`
+   - FHIR Service: `http://localhost:6000/fhir/generate`
    - Insurance Service: `http://localhost:3002/insurance/submit`
    - Frontend: `http://localhost:3000`
 
@@ -102,28 +102,8 @@ ayuniq/
 ## 🛡️ License
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it!
 
-## 🤝 Contributing
-We welcome contributions! Here's how you can help:
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/awesome-feature`).
-3. Commit your changes (`git commit -m 'Add awesome feature'`).
-4. Push to the branch (`git push origin feature/awesome-feature`).
-5. Open a Pull Request.
-
-## 🌟 Acknowledgments
-- [HL7 FHIR](https://www.hl7.org/fhir/) for healthcare interoperability standards.
-- [xAI](https://x.ai/) for inspiration and support.
-- The open-source community for tools like Docker and React.
-
 ## 📧 Contact
-For questions or support, reach out at [your-email@example.com](mailto:your-email@example.com).
+For questions or support, reach out at [your-email@example.com](mailto:sarvadubey@gmail.com).
 
----
 
-### Notes
-- **Customization**: Replace `https://github.com/your-username/ayuniq.git` and `your-email@example.com` with your actual repository URL and email.
-- **Visual Appeal**: Emojis and shields add a modern touch. Adjust colors or badges as needed.
-- **Current Date**: Reflects 02:39 PM IST, Thursday, September 18, 2025, ensuring timeliness.
-
-Save this as `README.md` in the root directory, and it will enhance your project's presentation! Let me know if you'd like further refinements!
 
