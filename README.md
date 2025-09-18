@@ -21,7 +21,7 @@ Ayuniq is a multi-component system designed to:
 
 The system consists of:
 - **Backend**: Node.js-based API (port 8000).
-- **FHIR Service**: Python/FastAPI microservice (port 6001).
+- **FHIR Service**: Python/FastAPI microservice (port 6000).
 - **Insurance Service**: Python/FastAPI microservice (port 3002).
 - **Frontend**: React application (port 3000).
 
