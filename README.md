@@ -1,12 +1,16 @@
 <img width="69" height="69" alt="image" src="https://github.com/user-attachments/assets/119b3bf3-f38e-40f6-b97c-abe5cf83eac2" />
+
 ## 🌿 Ayuniq - Hybrid FHIR-AYUSH System
 
 Welcome to **Ayuniq**, an innovative platform that integrates traditional Ayurvedic knowledge with modern healthcare standards using the FHIR (Fast Healthcare Interoperability Resources) framework. This project bridges NAMASTE (Ayurvedic terminology) and ICD-11 (WHO's International Classification of Diseases) systems, enabling seamless data exchange between microservices for FHIR bundle generation and insurance claim processing.
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
-[![Docker](https://img.shields.io/badge/Docker-Enabled-green.svg)](https://www.docker.com/)  
-[![Node.js](https://img.shields.io/badge/Node.js-18+-lightgrey.svg)](https://nodejs.org/)  
-[![Python](https://img.shields.io/badge/Python-3.9+-yellow.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Docker](https://img.shields.io/badge/Docker-Enabled-green.svg)](https://www.docker.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-lightgrey.svg)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-18+-informational.svg)](https://react.dev/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-6.x-brightgreen.svg)](https://www.mongodb.com/)
+[![Express](https://img.shields.io/badge/Express.js-4.x-black.svg)](https://expressjs.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES2022-yellow.svg)](https://developer.mozilla.org/docs/Web/JavaScript)
 
 ## 🚀 Overview
 
