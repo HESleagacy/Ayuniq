@@ -1,6 +1,6 @@
 <img width="69" height="69" alt="image" src="https://github.com/user-attachments/assets/119b3bf3-f38e-40f6-b97c-abe5cf83eac2" />
 
-## 🌿 Ayuniq - Hybrid FHIR-AYUSH System
+##  Ayuniq - Hybrid FHIR-AYUSH System
 
 Welcome to **Ayuniq**, an innovative platform that integrates traditional Ayurvedic knowledge with modern healthcare standards using the FHIR (Fast Healthcare Interoperability Resources) framework. This project bridges NAMASTE (Ayurvedic terminology) and ICD-11 (WHO's International Classification of Diseases) systems, enabling seamless data exchange between microservices for FHIR bundle generation and insurance claim processing.
 
@@ -12,7 +12,7 @@ Welcome to **Ayuniq**, an innovative platform that integrates traditional Ayurve
 [![Express](https://img.shields.io/badge/Express.js-4.x-black.svg)](https://expressjs.com/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES2022-yellow.svg)](https://developer.mozilla.org/docs/Web/JavaScript)
 
-## 🚀 Overview
+##  Overview
 
 Ayuniq is a multi-component system designed to:
 - **Generate FHIR Bundles**: Convert Ayurvedic and ICD-11 codes into standardized FHIR resources.
@@ -26,7 +26,7 @@ The system consists of:
 - **Insurance Service**: Python/FastAPI microservice (port 3002).
 - **Frontend**: React application (port 3000).
 
-## 💻 Tech Stack
+##  Tech Stack
 
 | **Category**      | **Technology**         | **Version** | **Purpose**                       |
 |-------------------|-------------------------|-------------|-----------------------------------|
@@ -45,20 +45,20 @@ The system consists of:
 | **Other**         | Git                    | Latest      | Version control                   |
 |                   | CSV Parsing (Node)     | Latest      | Data processing                   |
 
-## 📋 Features
+##  Features
 - Dual-table search for NAMASTE and ICD-11 terminologies.
 - Manual mapping creation between Ayurvedic and ICD-11 codes.
 - Offline data syncing for claims during disconnected sessions.
 - Dynamic FHIR bundle generation with condition and claim resources.
 - Mock insurance claim processing with persistence.
 
-## 🛠️ Prerequisites
+## Prerequisites
 - **Docker**: [Install Docker](https://docs.docker.com/get-docker/) and Docker Compose.
 - **Node.js**: Version 18+.
 - **Python**: Version 3.9+.
 - **Git**: For cloning the repository.
 
-## 📦 Installation
+## Installation
 
 1. **Clone the Repository**
    ```bash
@@ -83,7 +83,7 @@ The system consists of:
    docker-compose down
    ```
 
-## 🎮 Usage
+## Usage
 
 ### API Endpoints
 | Endpoint            | Method | Description                       |
@@ -106,7 +106,7 @@ curl -X POST 'http://localhost:8000/api/generate-fhir-claim' \
 - Claims are saved locally during offline sessions.
 - Run `POST /sync` on `insurance_service` (port 3002) when online to sync unsynced claims.
 
-## 📂 Project Structure
+## Project Structure
 ```
 Ayuniq/
 ├── backend/           # Node.js backend
@@ -119,8 +119,8 @@ Ayuniq/
 └── .gitignore         # Git ignore file
 ```
 
-## 🛡️ License
+## License
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it!
 
-## 📧 Contact
+## Contact
 For questions or support, reach out at [sarvadubey@gmail.com](mailto:sarvadubey@gmail.com).
